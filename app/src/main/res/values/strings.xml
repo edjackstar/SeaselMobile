@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SEasel mobile</string>
+    <string name="seasel">SEasel</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="library">Library</string>
+</resources>

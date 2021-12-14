@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_blue">#FF00A3FF</color>
+    <color name="main_dark_blue">#FF0083DF</color>
+    <color name="grey_input_hint">#FFA9A9A9</color>
+    <color name="disabled_grey">#FFC4C4C4</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_background">#FF202020</color>
+</resources>
