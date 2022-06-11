@@ -3,24 +3,48 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable-v24/bg_white_button.xml" value="0.182" />
         <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/bg_devider.xml" value="0.20625" />
         <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/bg_input_text.xml" value="0.2203125" />
         <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/bg_login_button.xml" value="0.2203125" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/bg_ripple_borderless.xml" value="0.182" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/bg_white_button.xml" value="0.182" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/bitmap_star.xml" value="0.182" />
         <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/border_shadow.xml" value="0.2203125" />
         <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/custom_thumb.xml" value="0.2203125" />
         <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/ic__4.xml" value="0.1125" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/ic_all_songs_selected.xml" value="0.182" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/ic_favorite_selected.xml" value="0.182" />
         <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/ic_note_down_green.xml" value="0.2046875" />
         <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/ic_note_down_red.xml" value="0.2046875" />
         <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/ic_note_up.xml" value="0.2046875" />
         <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/ic_note_up_green.xml" value="0.2046875" />
         <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/ic_note_up_red.xml" value="0.2046875" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/ic_repetitions_selected.xml" value="0.182" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/ic_star.xml" value="0.182" />
         <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/seekbar_drawable.xml" value="0.2203125" />
         <entry key="..\:/Projects/SEaselmobile/app/src/main/res/drawable/seekbar_progress.xml" value="0.2203125" />
         <entry key="..\:/Projects/SEaselmobile/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Projects/SEaselmobile/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Projects/SEaselmobile/app/src/main/res/layout/activity_music_list.xml" value="0.33" />
         <entry key="..\:/Projects/SEaselmobile/app/src/main/res/layout/activity_repetition.xml" value="0.25" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/layout/dialog_send_mark.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/layout/fragment_all_songs.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/layout/fragment_base.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/layout/fragment_faivorite.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/layout/fragment_feedback.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/layout/fragment_login.xml" value="0.62109375" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/layout/fragment_login1.xml" value="0.18854166666666666" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/layout/fragment_music_list.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/layout/fragment_repetition.xml" value="0.18" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/layout/fragment_repetitions.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/layout/item_composition.xml" value="0.33" />
         <entry key="..\:/Projects/SEaselmobile/app/src/main/res/layout/item_music_list.xml" value="0.5" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/layout/view_navigation_button.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/layout/view_rating.xml" value="0.67" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/menu/composition_menu.xml" value="0.29444444444444445" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/menu/composition_menu_add.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projects/SEaselmobile/app/src/main/res/menu/composition_menu_remove.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

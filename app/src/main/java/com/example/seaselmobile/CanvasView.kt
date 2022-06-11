@@ -12,14 +12,16 @@ import android.view.View
 import androidx.appcompat.content.res.AppCompatResources.getDrawable
 import com.example.seaselmobile.model.note.NoteAccuracy
 import com.example.seaselmobile.model.note.Takt
+import com.example.seaselmobile.model.note.frequencyRange
 
 
 class CanvasView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) :
-    View(context, attrs, defStyleAttr) {
+) : View(context, attrs, defStyleAttr) {
+
+    var frequency: Double = 0.0
 
     private var keyImage: Drawable? = null
     private var taktSizeImage: Drawable? = null
@@ -167,11 +169,18 @@ class CanvasView @JvmOverloads constructor(
                 val left =
                     center + ((note.offset + it) * taktLength).toInt() + (noteWidth * 0.5).toInt()
                 for (number in note.notes) {
-                    if (left + noteWidth / 2 - time * taktLength  < center)
-                        note.accuracy = NoteAccuracy.INCORRECT
-                    else
-                        note.accuracy = NoteAccuracy.NONE
-                    Log.d("lol", "${left + noteWidth / 2 - time * taktLength } $center ${note.accuracy}")
+                    if (left + noteWidth / 2 - time * taktLength < center && note.accuracy == NoteAccuracy.NONE) {
+
+                        if (frequency in frequencyRange(note.notes[0]))
+                            note.accuracy = NoteAccuracy.CORRECT
+                        else
+                            note.accuracy = NoteAccuracy.INCORRECT
+
+                        Log.d(
+                            "lol",
+                            "${note.notes[0]} ${note.accuracy} ${frequencyRange(note.notes[0])} $frequency"
+                        )
+                    }
                     val image = getNoteImage(number, note.accuracy)
                     if (image != null) {
                         image.bounds = Rect(

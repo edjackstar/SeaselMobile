@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.LoginActivity">
+    tools:context=".presentation.main_activity.MainActivity">
 
     <TextView
         android:id="@+id/repetitionTitle"
@@ -31,9 +31,8 @@
         app:layout_constraintStart_toStartOf="@id/repetitionTitle"
         app:layout_constraintTop_toTopOf="@id/repetitionTitle" />
 
-    <view
+    <com.example.seaselmobile.CanvasView
         android:id="@+id/repetitionCanvas"
-        class="com.example.seaselmobile.CanvasView"
         android:layout_width="match_parent"
         android:layout_height="164dp"
         app:layout_constraintBottom_toTopOf="@id/repetitionPlayButton"

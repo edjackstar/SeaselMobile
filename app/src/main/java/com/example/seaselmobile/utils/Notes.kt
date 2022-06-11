@@ -1,4 +1,4 @@
-package com.example.seaselmobile.ustils
+package com.example.seaselmobile.utils
 
 import com.example.seaselmobile.model.Accord
 import com.example.seaselmobile.model.note.NoteAccuracy

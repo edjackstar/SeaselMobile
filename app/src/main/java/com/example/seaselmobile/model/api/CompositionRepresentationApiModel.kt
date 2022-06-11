@@ -7,5 +7,6 @@ class CompositionRepresentationApiModel(
     var instrument: String,
     var author: String,
     var difficulty: Int,
-    var format: String
+    var format: String,
+    var avg_mark: Float?
 )

@@ -29,4 +29,13 @@
         <item name="android:textColorHint">@color/grey_input_hint</item>
         <item name="backgroundColor">@color/dark_background</item>
     </style>
+
+    <style name="ProgressBar.White" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">#ffffff</item>
+    </style>
+
+    <style name="MyRatingBar.Small" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlNormal">@color/grey_input_hint</item>
+        <item name="colorControlActivated">@color/rating</item>
+    </style>
 </resources>

@@ -1,9 +1,11 @@
 package com.example.seaselmobile
 
 import android.content.Context
+import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
-class SharedPreferencesController @Inject constructor(
+class StorageController @Inject constructor(
+    @ApplicationContext
     context: Context
 ) {
 
@@ -19,9 +21,17 @@ class SharedPreferencesController @Inject constructor(
         sp.edit().putString(ACCESS_TOKEN, token).apply()
     }
 
+    fun getFavorites(): List<Int> =
+        sp.getStringSet(FAVORITES, setOf())?.toList()?.map { it.toInt() } ?: listOf()
+
+    fun setFavorites(favorites: List<Int>) {
+        sp.edit().putStringSet(FAVORITES, favorites.map { it.toString() }.toSet()).apply()
+    }
+
     companion object {
         private const val REFRESH_TOKEN = "REFRESH_TOKEN"
         private const val ACCESS_TOKEN = "ACCESS_TOKEN"
+        private const val FAVORITES = "FAVORITES"
         private const val PREFERENCES = "myPreferences"
     }
 

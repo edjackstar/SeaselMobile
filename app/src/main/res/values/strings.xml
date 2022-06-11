@@ -1,8 +1,36 @@
 <resources>
     <string name="app_name">SEasel mobile</string>
-    <string name="seasel">SEasel</string>
+    <string name="seasel">Easel</string>
     <string name="e_mail">E-mail</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="library">Library</string>
+
+    <string name="login_app_title">Easel</string>
+    <string name="login_hint_email">E-mail</string>
+    <string name="login_hint_password">Password</string>
+    <string name="login_submit_button">Login</string>
+
+    <string name="all_songs_title">All songs</string>
+
+    <string name="repetitions_title">Repetitions</string>
+
+    <string name="repetition_title">Repetition</string>
+    <string name="repetition_dialog_title">Your mark</string>
+    <string name="repetition_dialog_button_confirm">Confirm</string>
+    <string name="repetition_dialog_button_cancel">Cancel</string>
+
+    <string name="favorite_title">Favorite</string>
+
+    <string name="composition_menu_leave_feedback">Leave feedback</string>
+    <string name="composition_menu_favorite_add">Add to favorite</string>
+    <string name="composition_menu_favorite_remove">Remove from favorite</string>
+
+    <string name="feedback_title">Feedback</string>
+    <string name="feedback_hint_comment">Comment</string>
+    <string name="feedback_submit_button">Send</string>
+
+    <string name="menu_all_songs">All songs</string>
+    <string name="menu_repetitions">Repetitions</string>
+    <string name="menu_favorite">Favorite</string>
 </resources>

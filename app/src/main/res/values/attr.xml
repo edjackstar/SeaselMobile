@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NavigationButtonView">
+        <attr name="buttonTextColor" format="color|reference" />
+        <attr name="buttonText" format="string|reference" />
+        <attr name="buttonImage" format="reference" />
+    </declare-styleable>
+</resources>

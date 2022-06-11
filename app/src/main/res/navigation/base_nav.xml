@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/baseNav.xml"
+    app:startDestination="@id/allSongsFragment">
+    <fragment
+        android:id="@+id/allSongsFragment"
+        android:name="com.example.seaselmobile.presentation.all_songs.AllSongsFragment"
+        android:label="AllSongsFragment" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.seaselmobile.presentation.favorite.FavoriteFragment"
+        android:label="FavoriteFragment" />
+    <fragment
+        android:id="@+id/repetitionsFragment"
+        android:name="com.example.seaselmobile.presentation.repetitions.RepetitionsFragment"
+        android:label="RepetitionsFragment" />
+</navigation>

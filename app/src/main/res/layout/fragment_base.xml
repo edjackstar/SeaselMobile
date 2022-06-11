@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/baseNavHost"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/baseAllSongsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/base_nav" />
+
+    <com.example.seaselmobile.view.NavigationButtonView
+        android:id="@+id/baseFavoriteButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_white_button"
+        android:elevation="8dp"
+        app:buttonImage="@drawable/ic_favorite"
+        app:buttonText="@string/menu_favorite"
+        app:buttonTextColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/baseAllSongsButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.example.seaselmobile.view.NavigationButtonView
+        android:id="@+id/baseAllSongsButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_white_button"
+        android:elevation="8dp"
+        app:buttonImage="@drawable/ic_all_songs_selected"
+        app:buttonText="@string/menu_all_songs"
+        app:buttonTextColor="@color/main_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/baseRepetitionsButton"
+        app:layout_constraintStart_toEndOf="@id/baseFavoriteButton" />
+
+    <com.example.seaselmobile.view.NavigationButtonView
+        android:id="@+id/baseRepetitionsButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_white_button"
+        android:elevation="8dp"
+        app:buttonImage="@drawable/ic_repetitions"
+        app:buttonText="@string/menu_repetitions"
+        app:buttonTextColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/baseAllSongsButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
