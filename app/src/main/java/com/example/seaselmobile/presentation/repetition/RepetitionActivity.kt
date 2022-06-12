@@ -204,7 +204,7 @@ class RepetitionActivity : AppCompatActivity() {
         var correctNotes = 0.0
         repetitionCanvas.takts.forEach { takt ->
             takt.notes.forEach {
-                if (it.accuracy == NoteAccuracy.CORRECT)
+                if (it.accuracy > 0)
                     correctNotes++
             }
         }

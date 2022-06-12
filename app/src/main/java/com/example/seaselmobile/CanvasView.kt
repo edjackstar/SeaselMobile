@@ -10,7 +10,6 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.View
 import androidx.appcompat.content.res.AppCompatResources.getDrawable
-import com.example.seaselmobile.model.note.NoteAccuracy
 import com.example.seaselmobile.model.note.Takt
 import com.example.seaselmobile.model.note.frequencyRange
 
@@ -30,7 +29,9 @@ class CanvasView @JvmOverloads constructor(
     private var upNoteImageRed: Drawable? = null
     private var downNoteImageRed: Drawable? = null
     private var upNoteImageGreen: Drawable? = null
+    private var upNoteImageYellow: Drawable? = null
     private var downNoteImageGreen: Drawable? = null
+    private var downNoteImageYellow: Drawable? = null
 
     private val linesPaint: Paint = Paint().also {
         it.color = Color.GRAY
@@ -53,23 +54,25 @@ class CanvasView @JvmOverloads constructor(
         return index * lineDist + topMargin
     }
 
-    fun getUpNote(noteAccuracy: NoteAccuracy): Drawable? {
-        return when (noteAccuracy) {
-            NoteAccuracy.CORRECT -> upNoteImageGreen
-            NoteAccuracy.INCORRECT -> upNoteImageRed
-            NoteAccuracy.NONE -> upNoteImage
+    fun getUpNote(noteAccuracy: Int): Drawable? {
+        return when {
+            noteAccuracy > 1 -> upNoteImageGreen
+            noteAccuracy == 1 -> upNoteImageYellow
+            noteAccuracy < 0 -> upNoteImageRed
+            else -> upNoteImage
         }
     }
 
-    fun getDownNote(noteAccuracy: NoteAccuracy): Drawable? {
-        return when (noteAccuracy) {
-            NoteAccuracy.CORRECT -> downNoteImageGreen
-            NoteAccuracy.INCORRECT -> downNoteImageRed
-            NoteAccuracy.NONE -> downNoteImage
+    fun getDownNote(noteAccuracy: Int): Drawable? {
+        return when {
+            noteAccuracy > 1 -> downNoteImageGreen
+            noteAccuracy == 1 -> downNoteImageYellow
+            noteAccuracy < 0 -> downNoteImageRed
+            else -> downNoteImage
         }
     }
 
-    private fun getNoteImage(note: Int, noteAccuracy: NoteAccuracy): Drawable? {
+    private fun getNoteImage(note: Int, noteAccuracy: Int): Drawable? {
         return when (note) {
             62 -> getUpNote(noteAccuracy)
             64 -> getUpNote(noteAccuracy)
@@ -169,17 +172,17 @@ class CanvasView @JvmOverloads constructor(
                 val left =
                     center + ((note.offset + it) * taktLength).toInt() + (noteWidth * 0.5).toInt()
                 for (number in note.notes) {
-                    if (left + noteWidth / 2 - time * taktLength < center && note.accuracy == NoteAccuracy.NONE) {
+                    if (left + noteWidth / 2 - time * taktLength < center + noteWidth && left + noteWidth / 2 - time * taktLength > center - noteWidth / 2) {
 
                         if (frequency in frequencyRange(note.notes[0]))
-                            note.accuracy = NoteAccuracy.CORRECT
-                        else
-                            note.accuracy = NoteAccuracy.INCORRECT
+                            note.accuracy++
 
                         Log.d(
                             "lol",
                             "${note.notes[0]} ${note.accuracy} ${frequencyRange(note.notes[0])} $frequency"
                         )
+                    } else if (left + noteWidth / 2 - time * taktLength < center - noteWidth / 2 && note.accuracy == 0) {
+                        note.accuracy--
                     }
                     val image = getNoteImage(number, note.accuracy)
                     if (image != null) {
@@ -214,6 +217,8 @@ class CanvasView @JvmOverloads constructor(
         downNoteImageRed = getDrawable(context, R.drawable.ic_note_down_red)
         upNoteImageGreen = getDrawable(context, R.drawable.ic_note_up_green)
         downNoteImageGreen = getDrawable(context, R.drawable.ic_note_down_green)
+        upNoteImageYellow = getDrawable(context, R.drawable.ic_note_up_yellow)
+        downNoteImageYellow = getDrawable(context, R.drawable.ic_note_down_yellow)
     }
 
     var takts: List<Takt> = listOf()

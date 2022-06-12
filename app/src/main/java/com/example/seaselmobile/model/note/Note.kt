@@ -6,7 +6,7 @@ data class Notes(
     val offset: Float,
     val duration: Float,
     val notes: List<Int>,
-    var accuracy: NoteAccuracy
+    var accuracy: Int
 )
 
 fun frequencyRange(note: Int): Range<Double> {

@@ -15,7 +15,7 @@ fun List<Accord>.toTakts(taktDuration: Int): List<Takt> {
             offset = offset,
             duration = realDuration,
             notes = accord.notes,
-            accuracy = NoteAccuracy.NONE
+            accuracy = 0
         )
         notesInTakt.add(note)
         offset += realDuration
