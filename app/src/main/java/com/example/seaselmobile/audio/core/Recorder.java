@@ -11,7 +11,7 @@ public class Recorder {
 
     private int audioSource = MediaRecorder.AudioSource.DEFAULT;
     private int channelConfig = AudioFormat.CHANNEL_IN_MONO;
-    private int audioEncoding = AudioFormat.ENCODING_PCM_16BIT;
+    private int audioEncoding = AudioFormat.ENCODING_PCM_8BIT;
     private int sampleRate = 44100;
     private Thread thread;
     private Callback callback;

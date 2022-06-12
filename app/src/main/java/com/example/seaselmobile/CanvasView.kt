@@ -172,7 +172,7 @@ class CanvasView @JvmOverloads constructor(
                 val left =
                     center + ((note.offset + it) * taktLength).toInt() + (noteWidth * 0.5).toInt()
                 for (number in note.notes) {
-                    if (left + noteWidth / 2 - time * taktLength < center  && left + noteWidth / 2 - time * taktLength > center - noteWidth) {
+                    if (left + noteWidth / 2 - time * taktLength < center && left + noteWidth / 2 - time * taktLength > center - noteWidth / 2) {
 
                         if (frequency in frequencyRange(note.notes[0]))
                             note.accuracy++
@@ -181,7 +181,7 @@ class CanvasView @JvmOverloads constructor(
                             "lol",
                             "${note.notes[0]} ${note.accuracy} ${frequencyRange(note.notes[0])} $frequency"
                         )
-                    } else if (left + noteWidth / 2 - time * taktLength < center - noteWidth && note.accuracy == 0) {
+                    } else if (left + noteWidth / 2 - time * taktLength < center - noteWidth / 2 && note.accuracy == 0) {
                         note.accuracy--
                     }
                     val image = getNoteImage(number, note.accuracy)
